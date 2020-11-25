@@ -24,12 +24,15 @@ class Course(models.Model):
     overview = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+
+        return self.subject
+
+
     class Meta:
         ordering = ['-created']
 
-    def __str__(self):
-        return self.title
-
+   
 class Module(models.Model):
 
     course = models.ForeignKey(Course,related_name='modules', on_delete=models.CASCADE)
