@@ -1,0 +1,19 @@
+##a list of files and directories to be absent from the public repo
+
+
+##database files
+*.sqlite3
+
+##environment files
+*.env
+
+
+##cached python files
+
+__pycache__/
+
+##app packages and configs
+*.json
+
+##dump data files
+fixtures/
